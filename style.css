@@ -1,0 +1,416 @@
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrapper {
+    display: flex; /* Creates a flexible row layout */
+    justify-content: space-between;
+    gap: 40px; /* Adds a gap between the two columns */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.left-content {
+    flex: 2; /* This div will take up more space (e.g., two-thirds) */
+}
+
+.right-content {
+    flex: 1; /* This div will take up less space (e.g., one-third) */
+}
+
+.right-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stacks the columns vertically */
+        align-items: center;
+    }
+}
+/* Menu toggle button (hidden by default) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Active state for menu toggle */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        /* This will position the menu below the logo on smaller screens */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 0; /* Initially hidden */
+        overflow: hidden;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        background-color: #444;
+        transition: height 0.3s ease;
+    }
+
+    .nav-links.active {
+        height: 200px; /* Or a dynamic height based on content */
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: flex; /* Show hamburger button */
+    }
+}
+
+
+
+
+
+/* Container for the overall layout */
+.main-content-wrapper {
+    display: flex; /* Arranges children side-by-side */
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.text-content {
+    flex: 1; /* Allows the text content to grow and take up available space */
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    flex-shrink: 0; /* Prevents the slideshow from shrinking */
+}
+
+/* Image styling */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+/* Add a fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        flex-direction: column; /* Stacks items vertically on smaller screens */
+        align-items: center;
+    }
+    .slideshow-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Styles for the gallery container */
+.gallery-container {
+    display: grid;
+    /* This creates a responsive grid that automatically adjusts the number of columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px; /* Creates space between the images */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styles for each image item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Adds a nice rounded border to the items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+    width: 100%; /* Makes the image fill its container */
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to make the images a little interactive */
+.gallery-image:hover {
+    transform: scale(1.05); /* Zooms in slightly on hover */
+}
+
+
+
+
+
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer Container */
+.main-footer {
+    background-color: #00468c; /* Dark blue background, similar to the original site */
+    color: #fff;
+    padding: 60px 0;
+    line-height: 1.5;
+}
+
+.main-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Flexbox for the columns */
+.footer-row {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: space-between;
+}
+
+.footer-col {
+    width: 30%; /* Sets initial width for columns */
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Underline effect for heading */
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #fff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+/* List styling */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+    padding-left: 5px; /* Adds a subtle hover effect */
+}
+
+/* Social media links */
+.social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover {
+    color: #00468c;
+    background-color: #fff;
+}
+
+/* Copyright Section */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media(max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+    }
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrapper {
+    display: flex; /* Creates a flexible row layout */
+    justify-content: space-between;
+    gap: 40px; /* Adds a gap between the two columns */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.left-content {
+    flex: 2; /* This div will take up more space (e.g., two-thirds) */
+}
+
+.right-content {
+    flex: 1; /* This div will take up less space (e.g., one-third) */
+}
+
+.right-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stacks the columns vertically */
+        align-items: center;
+    }
+}
+
+
